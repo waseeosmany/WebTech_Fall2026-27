@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Give Feedback - Customer Support</title>
+    <link rel="stylesheet" type="text/css" href="css/feedback.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h1>Give Feedback</h1>
+            <p>Tell us how we did.</p>
+        </div>
+
+        <div class="layout">
+
+            <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="request.html">New Request</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+            <a href="track.html">Track</a>
+            <a href="seekers.html">Job Seekers</a>
+            <a href="employers.html">Employers</a>
+            <a href="report.html">Report Scam</a>
+            <a href="account.html">Account Help</a>
+            <a href="feedback.html" class="active">Feedback</a>
+        </div>
+
+        <div class="content">
+
+            <form id="feedbackForm" method="post">
+                <fieldset>
+                    <legend>Your Feedback</legend>
+                    <table>
+                        <tr>
+                            <td><label>Your rating:</label></td>
+                            <td>
+                                <input type="radio" id="R1" name="Rating" value="1"><label class="opt" for="R1">1</label>
+                                <input type="radio" id="R2" name="Rating" value="2"><label class="opt" for="R2">2</label>
+                                <input type="radio" id="R3" name="Rating" value="3"><label class="opt" for="R3">3</label>
+                                <input type="radio" id="R4" name="Rating" value="4"><label class="opt" for="R4">4</label>
+                                <input type="radio" id="R5" name="Rating" value="5"><label class="opt" for="R5">5</label>
+                                <br><span class="counter">1 = very poor, 5 = excellent</span>
+                                <span class="error" id="ratingError"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="About">What was it about?</label></td>
+                            <td>
+                                <select id="About" name="About">
+                                    <option value="Default">-- Select --</option>
+                                    <option value="A support request">A support request</option>
+                                    <option value="The website">The website</option>
+                                    <option value="A job application">A job application</option>
+                                    <option value="Something else">Something else</option>
+                                </select>
+                                <span class="error" id="aboutError"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="Comments">Comments:</label></td>
+                            <td>
+                                <textarea id="Comments" name="Comments" rows="5" cols="20" style="resize:none" placeholder="Tell us more (optional)"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Contact me:</label></td>
+                            <td>
+                                <input type="checkbox" id="MayContact" name="MayContact" value="Yes"><label class="opt" for="MayContact">You may contact me about my feedback</label>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <div class="buttons">
+                    <input type="button" class="btn primary" id="submit" value="Send Feedback">
+                    <input type="reset" class="btn" id="reset" value="Reset">
+                </div>
+            </form>
+
+            <p class="result" id="result"></p>
+
+            <div class="notice">
+                Still have a problem? Send a <a href="request.html">New Request</a>. Or go back to the <a href="index.html">Support home</a>.
+            </div>
+
+        </div>
+
+        </div>
+
+        <div class="footer">
+            <p>Customer Support Team</p>
+        </div>
+
+    </div>
+
+    <script src="js/feedback.js"></script>
+</body>
+</html>

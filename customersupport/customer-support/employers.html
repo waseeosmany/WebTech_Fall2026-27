@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Employer Help - Customer Support</title>
+    <link rel="stylesheet" type="text/css" href="css/employers.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h1>Employer Help</h1>
+            <p>Post jobs, manage applicants and estimate your package cost.</p>
+        </div>
+
+        <div class="layout">
+
+            <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="request.html">New Request</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+            <a href="track.html">Track</a>
+            <a href="seekers.html">Job Seekers</a>
+            <a href="employers.html" class="active">Employers</a>
+            <a href="report.html">Report Scam</a>
+            <a href="account.html">Account Help</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+
+        <div class="content">
+
+            <div class="panel">
+                <h2>Posting your first job</h2>
+                <ul>
+                    <li>Step 1: Log in to your employer account.</li>
+                    <li>Step 2: Choose Post a Job and fill in the title, requirements and deadline.</li>
+                    <li>Step 3: Publish the job and share the link if you like.</li>
+                    <li>Step 4: Open Applicants to sort by match score and filter by status.</li>
+                    <li>Step 5: Use Shortlist or Reject on each candidate profile.</li>
+                </ul>
+            </div>
+
+            <form id="calcForm" method="post">
+                <fieldset>
+                    <legend>Package Cost Calculator</legend>
+                    <table>
+                        <tr>
+                            <td><label for="Package">Package:</label></td>
+                            <td>
+                                <select id="Package" name="Package">
+                                    <option value="Default">-- Select Package --</option>
+                                    <option value="1000">Basic: 1000 per job</option>
+                                    <option value="2500">Standard: 2500 per job</option>
+                                    <option value="5000">Premium: 5000 per job</option>
+                                </select>
+                                <span class="error" id="packageError"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="Jobs">Number of jobs:</label></td>
+                            <td>
+                                <input type="number" id="Jobs" name="Jobs" placeholder="Enter a number">
+                                <span class="error" id="jobsError"></span>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <div class="buttons">
+                    <input type="button" class="btn primary" id="calcBtn" value="Calculate">
+                </div>
+            </form>
+
+            <p class="result" id="result"></p>
+
+            <div class="notice">
+                Package prices shown here are examples only. Need your real prices? Send us a <a href="request.html">New Request</a>.
+            </div>
+
+        </div>
+
+        </div>
+
+        <div class="footer">
+            <p>Customer Support Team</p>
+        </div>
+
+    </div>
+
+    <script src="js/employers.js"></script>
+</body>
+</html>

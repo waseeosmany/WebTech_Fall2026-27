@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Report a Scam - Customer Support</title>
+    <link rel="stylesheet" type="text/css" href="css/report.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h1>Report a Scam</h1>
+            <p>Help us keep fake jobs off the website.</p>
+        </div>
+
+        <div class="layout">
+
+            <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="request.html">New Request</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+            <a href="track.html">Track</a>
+            <a href="seekers.html">Job Seekers</a>
+            <a href="employers.html">Employers</a>
+            <a href="report.html" class="active">Report Scam</a>
+            <a href="account.html">Account Help</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+
+        <div class="content">
+
+            <div class="notice warning">
+                Never pay money to get a job. A real employer will not ask you for a fee.
+            </div>
+
+            <form id="reportForm" method="post">
+                <fieldset>
+                    <legend>The Job</legend>
+                    <table>
+                        <tr>
+                            <td><label for="JobInfo">Job link or title:</label></td>
+                            <td>
+                                <input type="text" id="JobInfo" name="JobInfo" placeholder="Paste the link or write the title">
+                                <span class="error" id="jobError"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="Company">Company name:</label></td>
+                            <td>
+                                <input type="text" id="Company" name="Company" placeholder="Name of the company">
+                                <span class="error" id="companyError"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="Source">Where did you see it?</label></td>
+                            <td>
+                                <select id="Source" name="Source">
+                                    <option value="Default">-- Select --</option>
+                                    <option value="Our website">Our website</option>
+                                    <option value="Email">Email</option>
+                                    <option value="Phone call or message">Phone call or message</option>
+                                    <option value="Social media">Social media</option>
+                                </select>
+                                <span class="error" id="sourceError"></span>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <fieldset>
+                    <legend>What Happened</legend>
+                    <table>
+                        <tr>
+                            <td><label>Did you pay money?</label></td>
+                            <td>
+                                <input type="radio" id="PaidYes" name="Paid" value="Yes"><label class="opt" for="PaidYes">Yes</label>
+                                <input type="radio" id="PaidNo" name="Paid" value="No"><label class="opt" for="PaidNo">No</label>
+                                <span class="error" id="paidError"></span>
+                                <div id="amountRow">
+                                    <label for="Amount">Amount paid:</label>
+                                    <input type="text" id="Amount" name="Amount" placeholder="For example 5000">
+                                    <span class="error" id="amountError"></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="Details">Description:</label></td>
+                            <td>
+                                <textarea id="Details" name="Details" rows="5" cols="20" style="resize:none" placeholder="Tell us what happened"></textarea>
+                                <span class="error" id="detailsError"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="ReporterEmail">Your email:</label></td>
+                            <td>
+                                <input type="email" id="ReporterEmail" name="ReporterEmail" placeholder="So we can follow up">
+                                <span class="error" id="emailError"></span>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Confirmation</legend>
+                    <input type="checkbox" id="Condition" name="Condition">
+                    <label class="opt" for="Condition">I confirm this report is true to the best of my knowledge *</label>
+                </fieldset>
+
+                <div class="buttons">
+                    <input type="button" class="btn primary" id="submit" value="Send Report" disabled>
+                    <input type="reset" class="btn" id="reset" value="Reset">
+                </div>
+            </form>
+
+            <p class="result" id="result"></p>
+
+            <div class="notice">
+                Need help with something else? Send a <a href="request.html">New Request</a> or <a href="contact.html">contact us</a>.
+            </div>
+
+        </div>
+
+        </div>
+
+        <div class="footer">
+            <p>Customer Support Team</p>
+        </div>
+
+    </div>
+
+    <script src="js/report.js"></script>
+</body>
+</html>

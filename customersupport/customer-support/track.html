@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Track Your Request - Customer Support</title>
+    <link rel="stylesheet" type="text/css" href="css/track.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h1>Track Your Request</h1>
+            <p>Enter the reference number you received.</p>
+        </div>
+
+        <div class="layout">
+
+            <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="request.html">New Request</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+            <a href="track.html" class="active">Track</a>
+            <a href="seekers.html">Job Seekers</a>
+            <a href="employers.html">Employers</a>
+            <a href="report.html">Report Scam</a>
+            <a href="account.html">Account Help</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+
+        <div class="content">
+
+            <div class="panel">
+                <label for="RefNumber">Reference number:</label>
+                <input type="text" id="RefNumber" name="RefNumber" placeholder="For example SUP-1001">
+                <span class="error" id="refError"></span>
+                <div class="buttons">
+                    <input type="button" class="btn primary" id="trackBtn" value="Track">
+                </div>
+                <p class="hint">Demo page: try SUP-1001, SUP-1002 or SUP-1003.</p>
+            </div>
+
+            <div class="panel" id="resultPanel">
+                <h2 id="resSubject"></h2>
+                <p><span class="pill" id="resStatus"></span></p>
+                <p id="resNote"></p>
+            </div>
+
+            <div class="notice">
+                Cannot find your request? <a href="contact.html">Contact us</a> or send a <a href="request.html">New Request</a>.
+            </div>
+
+        </div>
+
+        </div>
+
+        <div class="footer">
+            <p>Customer Support Team</p>
+        </div>
+
+    </div>
+
+    <script src="js/track.js"></script>
+</body>
+</html>

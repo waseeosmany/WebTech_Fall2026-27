@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - Customer Support</title>
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h1>Contact Us</h1>
+            <p>Reach our support team by phone, email or message.</p>
+        </div>
+
+        <div class="layout">
+
+            <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="request.html">New Request</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="track.html">Track</a>
+            <a href="seekers.html">Job Seekers</a>
+            <a href="employers.html">Employers</a>
+            <a href="report.html">Report Scam</a>
+            <a href="account.html">Account Help</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+
+        <div class="content">
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Phone</h3>
+                    <p>+880 1XXX-XXXXXX</p>
+                </div>
+                <div class="card">
+                    <h3>Email</h3>
+                    <p>support@example.com</p>
+                </div>
+                <div class="card">
+                    <h3>Office</h3>
+                    <p>Example Tower, Dhaka</p>
+                </div>
+                <div class="card">
+                    <h3>Working Hours</h3>
+                    <table class="hours">
+                        <tr><td>Sat - Thu</td><td>9:00 - 18:00</td></tr>
+                        <tr><td>Friday</td><td>Closed</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="notice">The contact details above are sample placeholders. Replace them with your real ones.</div>
+
+            <form id="contactForm" method="post">
+                <fieldset>
+                    <legend>Send Us a Message</legend>
+                    <table>
+                        <tr>
+                            <td><label for="CName">Name:</label></td>
+                            <td>
+                                <input type="text" id="CName" name="CName" placeholder="Enter your name">
+                                <span class="error" id="nameError"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="CEmail">Email Address:</label></td>
+                            <td>
+                                <input type="email" id="CEmail" name="CEmail" placeholder="Enter your email">
+                                <span class="error" id="emailError"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="Dept">Department:</label></td>
+                            <td>
+                                <select id="Dept" name="Dept">
+                                    <option value="Default">-- Select Department --</option>
+                                    <option value="General Support">General Support</option>
+                                    <option value="Technical Support">Technical Support</option>
+                                    <option value="Billing">Billing</option>
+                                </select>
+                                <span class="error" id="deptError"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="Message">Message:</label></td>
+                            <td>
+                                <textarea id="Message" name="Message" rows="5" cols="20" style="resize:none" placeholder="How can we help?"></textarea>
+                                <span class="error" id="messageError"></span>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <div class="buttons">
+                    <input type="button" class="btn primary" id="send" value="Send Message">
+                    <input type="reset" class="btn" id="reset" value="Reset">
+                </div>
+            </form>
+
+            <p class="result" id="result"></p>
+
+            <div class="notice">
+                Prefer to describe a problem in detail? Use <a href="request.html">New Request</a>. Already have a reference number? <a href="track.html">Track it</a>.
+            </div>
+
+        </div>
+
+        </div>
+
+        <div class="footer">
+            <p>Customer Support Team</p>
+        </div>
+
+    </div>
+
+    <script src="js/contact.js"></script>
+</body>
+</html>

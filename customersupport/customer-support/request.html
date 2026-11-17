@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>New Request - Customer Support</title>
+    <link rel="stylesheet" type="text/css" href="css/request.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h1>New Request</h1>
+            <p>Tell us about your problem and we will get back to you.</p>
+        </div>
+
+        <div class="layout">
+
+            <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="request.html" class="active">New Request</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+            <a href="track.html">Track</a>
+            <a href="seekers.html">Job Seekers</a>
+            <a href="employers.html">Employers</a>
+            <a href="report.html">Report Scam</a>
+            <a href="account.html">Account Help</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+
+        <div class="content">
+
+            <form id="supportForm" method="post">
+                <fieldset>
+                    <legend>Your Details</legend>
+                    <table>
+                        <tr>
+                            <td><label for="CustomerName">Name:</label></td>
+                            <td>
+                                <input type="text" id="CustomerName" name="CustomerName" placeholder="Enter your name" required>
+                                <span class="error" id="nameError"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="ContactNumber">Contact Number:</label></td>
+                            <td>
+                                <input type="text" id="ContactNumber" name="ContactNumber" placeholder="Enter your contact number" required>
+                                <span class="error" id="phoneError"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="EmailAddress">Email Address:</label></td>
+                            <td>
+                                <input type="email" id="EmailAddress" name="EmailAddress" placeholder="Enter your email" required>
+                                <span class="error" id="emailError"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>I am a:</label></td>
+                            <td>
+                                <input type="radio" id="JobSeeker" name="UserType" value="Job Seeker"><label class="opt" for="JobSeeker">Job Seeker</label>
+                                <input type="radio" id="Employer" name="UserType" value="Employer"><label class="opt" for="Employer">Employer</label>
+                                <span class="error" id="userTypeError"></span>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your Problem</legend>
+                    <table>
+                        <tr>
+                            <td><label for="Category">Issue Category:</label></td>
+                            <td>
+                                <select id="Category" name="Category">
+                                    <option value="Default">-- Select Category --</option>
+                                    <option value="Account / Login">Account / Login</option>
+                                    <option value="Profile or CV Upload">Profile or CV Upload</option>
+                                    <option value="Job Application Problem">Job Application Problem</option>
+                                    <option value="Job Posting">Job Posting (employers)</option>
+                                    <option value="Payment or Package">Payment or Package</option>
+                                    <option value="Interview or Shortlisting">Interview or Shortlisting</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <span class="error" id="categoryError"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="Priority">Priority:</label></td>
+                            <td>
+                                <select id="Priority" name="Priority">
+                                    <option value="Normal">Normal</option>
+                                    <option value="Low">Low</option>
+                                    <option value="Urgent">Urgent</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="Subject">Subject:</label></td>
+                            <td>
+                                <input type="text" id="Subject" name="Subject" placeholder="One line summary" required>
+                                <span class="error" id="subjectError"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="Problem">Short Description:</label></td>
+                            <td>
+                                <textarea id="Problem" name="Problem" rows="5" cols="20" style="resize:none" placeholder="Describe your problem in a few sentences" required></textarea>
+                                <span class="counter" id="counter">300 characters left</span>
+                                <span class="error" id="problemError"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="Attachment">Attachment (optional):</label></td>
+                            <td>
+                                <input type="file" id="Attachment" name="Attachment">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Contact me by:</label></td>
+                            <td>
+                                <input type="radio" id="PrefPhone" name="ContactPref" value="Phone"><label class="opt" for="PrefPhone">Phone</label>
+                                <input type="radio" id="PrefEmail" name="ContactPref" value="Email"><label class="opt" for="PrefEmail">Email</label>
+                                <span class="error" id="prefError"></span>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Consent</legend>
+                    <input type="checkbox" id="Condition" name="Condition">
+                    <label class="opt" for="Condition">I agree to be contacted about this request *</label>
+                </fieldset>
+
+                <div class="buttons">
+                    <input type="button" class="btn primary" id="submit" value="Submit" disabled>
+                    <input type="reset" class="btn" id="reset" value="Reset">
+                </div>
+            </form>
+
+            <p class="result" id="result"></p>
+
+            <div class="notice">
+                Already sent a request? <a href="track.html">Track it here</a>. Looking for a quick answer first? See the <a href="faq.html">FAQ</a>.
+            </div>
+
+        </div>
+
+        </div>
+
+        <div class="footer">
+            <p>Customer Support Team</p>
+        </div>
+
+    </div>
+
+    <script src="js/request.js"></script>
+</body>
+</html>

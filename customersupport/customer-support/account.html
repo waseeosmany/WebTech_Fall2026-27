@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Help - Customer Support</title>
+    <link rel="stylesheet" type="text/css" href="css/account.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h1>Account Help</h1>
+            <p>Forgot your password? We will email you a reset link.</p>
+        </div>
+
+        <div class="layout">
+
+            <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="request.html">New Request</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+            <a href="track.html">Track</a>
+            <a href="seekers.html">Job Seekers</a>
+            <a href="employers.html">Employers</a>
+            <a href="report.html">Report Scam</a>
+            <a href="account.html" class="active">Account Help</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+
+        <div class="content">
+
+            <form id="resetForm" method="post">
+                <fieldset>
+                    <legend>Forgot Password</legend>
+                    <table>
+                        <tr>
+                            <td><label for="ResetEmail">Account email:</label></td>
+                            <td>
+                                <input type="email" id="ResetEmail" name="ResetEmail" placeholder="Enter your account email">
+                                <span class="error" id="emailError"></span>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <div class="buttons">
+                    <input type="button" class="btn primary" id="sendLink" value="Send Reset Link">
+                </div>
+            </form>
+
+            <p class="result" id="result"></p>
+
+            <div class="panel">
+                <h2>Other account help</h2>
+                <ul>
+                    <li>To change your email or delete your account, send a <a href="request.html">New Request</a> and choose the category "Account / Login".</li>
+                    <li>Cannot log in at all? Use the reset link above first.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        </div>
+
+        <div class="footer">
+            <p>Customer Support Team</p>
+        </div>
+
+    </div>
+
+    <script src="js/account.js"></script>
+</body>
+</html>
